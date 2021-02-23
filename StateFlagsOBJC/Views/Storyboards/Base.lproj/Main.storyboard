@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5NJ-ii-0e8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="58h-me-MUL">
+            <objects>
+                <collectionViewController id="5NJ-ii-0e8" customClass="CMSCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Pmq-b3-fue">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Rn-7d-Oag">
+                            <size key="itemSize" width="182" height="167"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stateCell" id="ksr-wq-iSt" customClass="CMSStateCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xym-j6-s49">
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9AL-ED-5bl">
+                                            <rect key="frame" x="8" y="8" width="166" height="123"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="165" id="DHf-ty-hoD"/>
+                                                <constraint firstAttribute="height" constant="120" id="kyQ-zL-e9e"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9x-fE-5co">
+                                            <rect key="frame" x="8" y="139" width="166" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="cwm-6B-il3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9AL-ED-5bl" firstAttribute="leading" secondItem="xym-j6-s49" secondAttribute="leading" constant="8" id="2DS-UK-ysF"/>
+                                        <constraint firstAttribute="trailing" secondItem="9AL-ED-5bl" secondAttribute="trailing" constant="8" id="9sR-N3-lFc"/>
+                                        <constraint firstItem="i9x-fE-5co" firstAttribute="top" secondItem="9AL-ED-5bl" secondAttribute="bottom" constant="8" id="HfV-jy-gY1"/>
+                                        <constraint firstItem="i9x-fE-5co" firstAttribute="width" secondItem="9AL-ED-5bl" secondAttribute="width" id="X48-9L-ong"/>
+                                        <constraint firstItem="i9x-fE-5co" firstAttribute="centerX" secondItem="9AL-ED-5bl" secondAttribute="centerX" id="mjg-qE-7kk"/>
+                                        <constraint firstItem="9AL-ED-5bl" firstAttribute="top" secondItem="xym-j6-s49" secondAttribute="top" constant="8" id="nBd-GB-YTj"/>
+                                        <constraint firstAttribute="bottom" secondItem="i9x-fE-5co" secondAttribute="bottom" constant="8" id="uzF-Zr-CRx"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="182" height="167"/>
+                                <connections>
+                                    <outlet property="stateFlagImageView" destination="9AL-ED-5bl" id="Pak-Mp-Qye"/>
+                                    <outlet property="stateNameLabel" destination="i9x-fE-5co" id="Enh-lR-Xhm"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5NJ-ii-0e8" id="SVn-TP-Ls3"/>
+                            <outlet property="delegate" destination="5NJ-ii-0e8" id="H92-aY-KWP"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2f-Rn-y9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.31884057971018" y="-64.285714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
